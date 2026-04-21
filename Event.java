@@ -1,0 +1,47 @@
+
+abstract class Event{
+
+    //all values are private for capsulation princeple
+
+    private String name;
+    private Time startTime;
+    private Time endTime;
+    private String classification;
+    private String sponcerPerson;
+    private String sponcerDepartment;
+
+
+
+
+
+    public boolean overlap(Event event2){
+        // their is no overlap if Event1 ends before Event2 starts, OR
+        //Event1 starts after Event2 ends while
+        // they DO NOT START AND END at same time
+        int ev1end_ev2start   = this.endTime.compareTime(event2.endTime);
+        int ev1start_ev2end   = this.startTime.compareTime(event2.endTime);
+        int ev1start_ev2start = this.startTime.compareTime(event2.startTime);
+        int ev1end_ev2end     = this.endTime.compareTime(event2.endTime);
+        if (ev1end_ev2start <= 0 || ev1start_ev2end >= 0 ){
+            if(ev1end_ev2end == 0 && ev1start_ev2start == 0) { //in case they are same time then OVERLAPING
+                return true;
+            }
+            else{
+                return false;}
+            }
+        else return true;
+    }
+    public Event(Time startTime, Time endTime,
+                 String name, String sponcerDepartment, String sponcerPerson, String classification){
+
+        this.startTime = startTime;
+        this.endTime = endTime;
+        this.name = name;
+        this.sponcerDepartment = sponcerDepartment;
+        this.sponcerPerson = sponcerPerson;
+        this.classification = classification;
+
+    }
+
+
+
