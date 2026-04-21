@@ -1,7 +1,7 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 
-abstract class Event{
+public class Event{
 
     //all values are private for capsulation princeple
 
