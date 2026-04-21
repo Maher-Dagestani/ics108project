@@ -43,7 +43,7 @@ public class Time {
         String timeData = "Date: ";
         for(int i = 0; i < this.getDate().length; i++){
             if (i == 0){timeData = timeData + this.getDate()[i];}
-            else{timeData = timeData + "/" + this.getDate();}
+            else{timeData = timeData + "/" + this.getDate()[i];}
         }
         for(int i = 0; i < this.getHour().length; i++){
             if (i == 0){timeData = timeData + "\n time: "+ this.getHour()[i];}
