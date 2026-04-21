@@ -42,6 +42,7 @@ public class Venue {
 
     public Venue(String classification){
         this.classification = classification;
+        this.events = new ArrayList<Event>();
     }
 
 
