@@ -59,7 +59,7 @@ for the following, just extend the class venue:
 - add function to print the events
  
 ### also...
-make it consule app and make the output pretty.
+make it consule app and make the output pretty...
 
 
 ----------------------------------------------------------
