@@ -31,6 +31,11 @@ venue.getEvents() return an arraylist full of the events in the venue
 
 
 
+
+abo yahya dont forget:
+- make sure the user enter valad time + the end time must be bigger than start time before making new event
+- feel free to extend the venue class or the event class to fit your needs.
+
 this code (venue) + Event + Time is written by 𝔐𝔞𝔥𝔢𝔯 𝔇𝔞𝔤𝔢𝔰𝔱𝔞𝔫𝔦*/
 
 public class Venue {
