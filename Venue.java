@@ -22,12 +22,12 @@ venue.delete(event) to remove event
 venue.getEvents() return an arraylist full of the events in the venue
 
 -----using the event---
- * event.getName()              returns the event name
- * event.getStartTime()         returns start time as String
- * event.getEndTime()           returns end time as String
- * event.getClassification()    returns the classification
+ * event.getName()         returns the event name
+ * event.getStartTime()      returns start time as String
+ * event.getEndTime()          returns end time as String
+ * event.getClassification()     returns the classification
  * event.getSponcerPerson()     returns the sponcer person name
- * event.getSponcerDepartment() returns the sponcer department name
+ * event.getSponcerDepartment()    returns the sponcer department name
 
 
 
