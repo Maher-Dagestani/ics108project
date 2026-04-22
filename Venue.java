@@ -28,6 +28,7 @@ venue.getEvents() return an arraylist full of the events in the venue
  * event.getClassification()     returns the classification
  * event.getSponcerPerson()     returns the sponcer person name
  * event.getSponcerDepartment()    returns the sponcer department name
+ * time.compare(time)   returns 1, 0, -1 based on which time iis bigger
 
 
 
