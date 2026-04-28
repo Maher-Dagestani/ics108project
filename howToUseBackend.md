@@ -35,8 +35,8 @@ now to create an event you should first create startaTime and endTime using
  now not organizers can participate in events by using
  
       person.addEvent(Event event)
-   which return null if added sucsessfully and return an event that overlap withen the user schedual (and
-   that indecate the ecent was not added sucsessfully)
+       which return null if added sucsessfully and return an event that overlap withen the user schedual (and
+       that indecate the ecent was not added sucsessfully)
 
 and can also check the events a user participating in using:
 
@@ -49,24 +49,24 @@ and can also check the events a user participating in using:
 
 ### using person
 ---------
-  person.getId() return id as int
-  person.getName() return name as string
-  person. checkPermission() return true if user is organizer and false if not
+-  person.getId() return id as int
+- person.getName() return name as string
+-  person. checkPermission() return true if user is organizer and false if not
 
 ### using venue
 -------------------
-venue.delete(event, person) to remove event (also check for permission first)
-venue.getEvents() return an arraylist full of the events in the venue
+- venue.delete(event, person) to remove event (also check for permission first)
+- venue.getEvents() return an arraylist full of the events in the venue
 
 
 ### for events
 --------
- * event.getName()              returns the event name
- * event.getStartTime()         returns start time as String
- * event.getEndTime()           returns end time as String
- * event.getClassification()    returns the classification
- * event.getSponcerPerson()     returns the sponcer person name
- * event.getSponcerDepartment() returns the sponcer department name
+ - event.getName()              returns the event name
+ - event.getStartTime()         returns start time as String
+ - event.getEndTime()           returns end time as String
+ - event.getClassification()    returns the classification
+ - event.getSponcerPerson()     returns the sponcer person name
+ - event.getSponcerDepartment() returns the sponcer department name
 
 
 
