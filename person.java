@@ -12,6 +12,7 @@ public class person {
         this.id = id;
         this.name = name;
         this.isOrganizer = isOrganizer;
+        this.events = new ArrayList<>();
     }
 
     public int getId() {
