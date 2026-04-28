@@ -1,10 +1,10 @@
 
 
-to use the code:
+# to use the backend code:
 
 
-
-------------------------for organizers----------------
+## for organizers
+----------------------------------------
 you can create a new user profile using:
     new person(int id, String name, boolean isOrganizer)
     PLS NOTE: making isOrganizer true allow user to create new events
@@ -26,8 +26,8 @@ now to create an event you should first create startaTime and endTime using
 
   IMPORTANT: if user is not organizer he shouldnt even see this oprion in the main!!
 
-
- ---------------------------for not organizers-----------------
+## for not organizers
+ --------------------------------------------
  now not organizers can participate in events by using
       person.addEvent(Event event)
    which return null if added sucsessfully and return an event that overlap withen the user schedual (and
@@ -38,19 +38,23 @@ person.getEvents()
 
 
 ------------------------------------------------------------------------------------------------------------
-other functionalities:
+## other functionalities:
 
------using person----
+
+### using person
+---------
   person.getId() return id as int
   person.getName() return name as string
   person. checkPermission() return true if user is organizer and false if not
 
-
------using venue--------------
+### using venue
+-------------------
 venue.delete(event, person) to remove event (also check for permission first)
 venue.getEvents() return an arraylist full of the events in the venue
 
------using the event---
+
+### for events
+--------
  * event.getName()              returns the event name
  * event.getStartTime()         returns start time as String
  * event.getEndTime()           returns end time as String
