@@ -6,18 +6,22 @@
 ## for organizers
 ----------------------------------------
 you can create a new user profile using:
+
     new person(int id, String name, boolean isOrganizer)
     PLS NOTE: making isOrganizer true allow user to create new events
 
 then you need to create a Venue (or use existing ones)
+
     new Venue(String classification, int maxCapacity )
 
 now to create an event you should first create startaTime and endTime using
+
     new Time(int[] date, int[] time)
     example new Time({2026,5,5}, {9, 30})
 
 
 2-create event by
+
     new Event(Time startTime, Time endTime, String name, Venue sponcerDepartment, person sponcer, String classification)
 
 
@@ -29,12 +33,14 @@ now to create an event you should first create startaTime and endTime using
 ## for not organizers
  --------------------------------------------
  now not organizers can participate in events by using
+ 
       person.addEvent(Event event)
    which return null if added sucsessfully and return an event that overlap withen the user schedual (and
    that indecate the ecent was not added sucsessfully)
 
 and can also check the events a user participating in using:
-person.getEvents()
+
+    person.getEvents()
 
 
 ------------------------------------------------------------------------------------------------------------
