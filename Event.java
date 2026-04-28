@@ -31,7 +31,7 @@ public class Event{
         // their is no overlap if Event1 ends before Event2 starts, OR
         //Event1 starts after Event2 ends while
         // they DO NOT START AND END at same time
-        int ev1end_ev2start   = this.endTime.compareTime(event2.endTime);
+        int ev1end_ev2start   = this.endTime.compareTime(event2.startTime);
         int ev1start_ev2end   = this.startTime.compareTime(event2.endTime);
         int ev1start_ev2start = this.startTime.compareTime(event2.startTime);
         int ev1end_ev2end     = this.endTime.compareTime(event2.endTime);
