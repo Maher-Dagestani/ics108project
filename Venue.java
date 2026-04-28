@@ -10,6 +10,7 @@ public class Venue {
     public Venue(String classification, int maxCapacity ){
         this.maxCapacity = maxCapacity;
         this.classification = classification;
+        this.events = new ArrayList<>();
     }
 
 
