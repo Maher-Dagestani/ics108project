@@ -1,7 +1,7 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 
-abstract class Event{
+public class Event{
 
     //all values are private for capsulation princeple
 
@@ -9,8 +9,8 @@ abstract class Event{
     private Time startTime;
     private Time endTime;
     private String classification;
-    private String sponcerPerson;
-    private String sponcerDepartment;
+    private person sponcerPerson;
+    private Venue sponcerDepartment;
 
 
 
@@ -20,8 +20,8 @@ abstract class Event{
     public String getStartTime() { return startTime.toString(); }
     public String getEndTime() { return endTime.toString(); }
     public String getClassification() { return classification; }
-    public String getSponcerPerson() { return sponcerPerson; }
-    public String getSponcerDepartment() { return sponcerDepartment; }
+    public person getSponcerPerson() { return sponcerPerson; }
+    public Venue getSponcerDepartment() { return sponcerDepartment; }
 
 
 
@@ -31,7 +31,7 @@ abstract class Event{
         // their is no overlap if Event1 ends before Event2 starts, OR
         //Event1 starts after Event2 ends while
         // they DO NOT START AND END at same time
-        int ev1end_ev2start   = this.endTime.compareTime(event2.endTime);
+        int ev1end_ev2start   = this.endTime.compareTime(event2.startTime);
         int ev1start_ev2end   = this.startTime.compareTime(event2.endTime);
         int ev1start_ev2start = this.startTime.compareTime(event2.startTime);
         int ev1end_ev2end     = this.endTime.compareTime(event2.endTime);
@@ -50,13 +50,13 @@ abstract class Event{
 
     //-------------------------constructure--------------------------------
     public Event(Time startTime, Time endTime,
-                 String name, String sponcerDepartment, String sponcerPerson, String classification){
+                 String name, Venue sponcerDepartment, person sponcer, String classification){
 
         this.startTime = startTime;
         this.endTime = endTime;
         this.name = name;
         this.sponcerDepartment = sponcerDepartment;
-        this.sponcerPerson = sponcerPerson;
+        this.sponcerPerson = sponcer;
         this.classification = classification;
 
     }
