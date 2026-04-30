@@ -12,7 +12,7 @@ you can create a new user profile using:
 
 then you need to create a Venue (or use existing ones)
 
-    new Venue(String classification, int maxCapacity )
+    Venue building23 = new Venue(String classification, int maxCapacity )
 
 now to create an event you should first create startaTime and endTime using
 
@@ -22,10 +22,13 @@ now to create an event you should first create startaTime and endTime using
 
 2-create event by
 
-    new Event(Time startTime, Time endTime, String name, Venue sponcerDepartment, person sponcer, String classification)
+    new Event(Time startTime, Time endTime, String name, String  sponcerDepartment, person sponcer, String classification)
 
 
-4- add evet using venue.add(event, person), note this return null if added sucsessfully and return an event of which their
+4- add evet using \
+    venue.add(event, person),
+    bledimh56.add(event, person)
+ note this return null if added sucsessfully and return an event of which their
   is overlap with in case of overlap without adding the event to the storage, also person should have isOrganizer to add sucsessfully
 
   IMPORTANT: if user is not organizer he shouldnt even see this oprion in the main!!

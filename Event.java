@@ -10,7 +10,7 @@ public class Event{
     private Time endTime;
     private String classification;
     private person sponcerPerson;
-    private Venue sponcerDepartment;
+    private String sponcerDepartment;
 
 
 
@@ -21,7 +21,7 @@ public class Event{
     public String getEndTime() { return endTime.toString(); }
     public String getClassification() { return classification; }
     public person getSponcerPerson() { return sponcerPerson; }
-    public Venue getSponcerDepartment() { return sponcerDepartment; }
+    public String getSponcerDepartment() { return sponcerDepartment; }
 
 
 
@@ -50,7 +50,7 @@ public class Event{
 
     //-------------------------constructure--------------------------------
     public Event(Time startTime, Time endTime,
-                 String name, Venue sponcerDepartment, person sponcer, String classification){
+                 String name, String sponcerDepartment, person sponcer, String classification){
 
         this.startTime = startTime;
         this.endTime = endTime;

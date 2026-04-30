@@ -3,13 +3,15 @@ import java.util.ArrayList;
 public class Venue {
     private String name;
     private String type;
+    private String venueName;
     private int maxCapacity;
     private ArrayList<Event> events;
     private String classification;
 
-    public Venue(String classification, int maxCapacity ){
+    public Venue(String classification, int maxCapacity, String venueName){
         this.maxCapacity = maxCapacity;
         this.classification = classification;
+        this.venueName = venueName;
         this.events = new ArrayList<>();
     }
 
@@ -23,7 +25,7 @@ public class Venue {
     public Event add(Event event, person person){
 
         Event overlap = checkOverlap(event);
-        if (overlap == null&& person.checkPermission()) { //this check for overlap and makes sure user is organizer
+        if (overlap == null && person.checkPermission()) { //this check for overlap and makes sure user is organizer
             events.add(event);
         }
         return overlap;
