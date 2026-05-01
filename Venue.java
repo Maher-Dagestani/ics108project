@@ -1,9 +1,8 @@
 import java.util.ArrayList;
 
 public class Venue {
-    private String name;
     private String type;
-    private String venueName;
+    public String venueName;
     private int maxCapacity;
     private ArrayList<Event> events;
     private String classification;
@@ -13,6 +12,10 @@ public class Venue {
         this.classification = classification;
         this.venueName = venueName;
         this.events = new ArrayList<>();
+    }
+    // getters
+    public String getName(){
+        return this.venueName;
     }
 
 
