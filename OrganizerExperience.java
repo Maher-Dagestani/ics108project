@@ -34,12 +34,12 @@ public class OrganizerExperience {
         System.out.print("What do you want to do? (enter \"n\" to add a new event, \"s\" to see available events): ");
         choice = scnr.next().charAt(0);
         if (Character.toLowerCase(choice) == 'n') {
-            addEventExperience(scnr);
+            addEventExperience(scnr, thisPerson);
         } else if (Character.toLowerCase(choice) == 's') {
-            joinEventExperience(scnr);
+            joinEventExperience(scnr, thisPerson);
         }
     }
-    public void addEventExperience(Scanner scnr) {
+    public void addEventExperience(Scanner scnr, person thisPerson) {
         Event newEvent;
 
         System.out.print("Enter event's name: ");
@@ -147,7 +147,7 @@ public class OrganizerExperience {
         newVenue.add(newEvent, thisPerson);
         System.out.printf("Event added successfully.");
     }
-    public void joinEventExperience(Scanner scnr) {
+    public void joinEventExperience(Scanner scnr, person thisPerson) {
         Venue venue1 = new Venue("sport", 21, "venue1");
         Venue venue2 = new Venue("lecture", 41, "venue2");
         Venue venue3 = new Venue("conference", 211, "venue3");
@@ -162,11 +162,20 @@ public class OrganizerExperience {
         Event event2 = new Event(startTime, endTime, "eventName", sponcerDepartment, personTest, eventClassification);
         venue1.add(event1, personTest);
         venue3.add(event2, personTest);
-        System.out.println();
+        System.out.println("Choose an event (enter the event's name): ");
         for (Venue x:UserInteraction.venueList) {
-            System.out.println(x.getName()+":");
+            System.out.println("Venue: " + x.getName());
             for (Event y:x.getEvents()){
-                System.out.println(" - "  + y.getName() + "    " + y.getStartTime());
+                System.out.println(" Event name: "  + y.getName() + " --- event date: " + y.getStartTime());
+            }
+        }
+        System.out.print("Your choice: ");
+        String chosenEventName = scnr.nextLine();
+        for (int i = 0; i < UserInteraction.venueList.size(); i++) {
+            for (int j = 0; j < UserInteraction.venueList.get(i).getEvents().size(); j++) {
+                if (UserInteraction.venueList.get(i).getEvents().get(j).getName() == chosenEventName) {
+                    thisPerson.addEvent(UserInteraction.venueList.get(i).getEvents().get(j));
+                }
             }
         }
     }
