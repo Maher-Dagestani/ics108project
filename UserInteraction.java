@@ -24,13 +24,9 @@ public class UserInteraction {
             isOrganizer = true;
         }
         thisPerson = new person(id, userName, isOrganizer);
-
-
-        if (isOrganizer == true) { 
-            OrganizerExperience start = new OrganizerExperience(thisPerson, scnr);
-        } else if (isOrganizer == false) {
-            StudentExperience start = new StudentExperience(thisPerson, scnr);
-        }
+    }
+	public person getUser(){
+		return this.thisPerson;
     }
 
 }

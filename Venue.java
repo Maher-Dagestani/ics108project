@@ -17,6 +17,12 @@ public class Venue {
     public String getName(){
         return this.venueName;
     }
+    public int getMaxCapacity() {
+        return this.maxCapacity;
+    }
+    public String getClassification() {
+        return this.classification;
+    }
 
 
     public Event checkOverlap(Event event){

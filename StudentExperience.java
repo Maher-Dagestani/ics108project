@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.ArrayList;
+
 
 public class StudentExperience {
     person thisPerson;
@@ -27,32 +29,18 @@ public class StudentExperience {
     int eMinute;
 
     person personTest;
-    
+    Scanner scnr;
     public StudentExperience(person thisPerson, Scanner scnr) {
         this.personTest = thisPerson;
         this.thisPerson = thisPerson;
-        System.out.print("Greetings, student. Enter \"s\" to see and join available events): ");
-        choice = scnr.next().charAt(0);
-        if (Character.toLowerCase(choice) == 's') {
-            joinEventExperience(scnr, thisPerson);
-        }
+	this.scnr = scnr;
+	loop();
     }
     
+//   =---------- this make user join events --------=
     public void joinEventExperience(Scanner scnr, person thisPerson) {
-        Venue venue1 = new Venue("sport", 21, "venue1");
-        Venue venue2 = new Venue("lecture", 41, "venue2");
-        Venue venue3 = new Venue("conference", 211, "venue3");
-        Venue venue4 = new Venue("public", 234, "venue4");
-        UserInteraction.venueList.add(venue1);
-        UserInteraction.venueList.add(venue2);
-        UserInteraction.venueList.add(venue3);
-        UserInteraction.venueList.add(venue4);
 
         System.out.print("Available events: ");
-        Event event1 = new Event(startTime, endTime, "sndkfnjkdsf", sponcerDepartment, personTest, eventClassification);
-        Event event2 = new Event(startTime, endTime, "eventName", sponcerDepartment, personTest, eventClassification);
-        venue1.add(event1, personTest);
-        venue3.add(event2, personTest);
         System.out.println("Choose an event (enter the event's name): ");
         for (Venue x:UserInteraction.venueList) {
             System.out.println("Venue: " + x.getName());
@@ -61,14 +49,55 @@ public class StudentExperience {
             }
         }
         System.out.print("Your choice: ");
-        String chosenEventName = scnr.nextLine();
+        String chosenEventName = scnr.next();
+	chosenEventName = scnr.nextLine();
+
+
+        // ----------------------- this need testing/ it should add the event into the user events. 
         for (int i = 0; i < UserInteraction.venueList.size(); i++) {
             for (int j = 0; j < UserInteraction.venueList.get(i).getEvents().size(); j++) {
-                if (UserInteraction.venueList.get(i).getEvents().get(j).getName() == chosenEventName) {
+                if (UserInteraction.venueList.get(i).getEvents().get(j).getName().equals(chosenEventName)) {
                     thisPerson.addEvent(UserInteraction.venueList.get(i).getEvents().get(j));
                 }
             }
         }
+
+
+
+
     }
+
+// print current user ecvents
+public void list(Scanner scnr, person thisPerson){
+   ArrayList<Event> theList = thisPerson.getEvents();
+    if(theList.size() == 0){System.out.println("you didnt join any events yet!");}
+    else{
+    for (Event x:theList) {
+            System.out.println(x.getName());
+        }
+    }
+
+}
+     protected void loop(){
+
+        
+	while(true){
+	System.out.println("Greetings, student. Enter \"s\" to join event. \"l\" to see your current events, \"q\" to quit");
+        
+        choice = scnr.next().charAt(0);
+        if (Character.toLowerCase(choice) == 's') {
+            joinEventExperience(scnr, thisPerson);
+        }
+
+        if (Character.toLowerCase(choice) == 'l') {
+            list(scnr, thisPerson);
+        }
+	if (Character.toLowerCase(choice) == 'q') {
+            break;
+        }
+        }
+
+     }
+    
 }
 

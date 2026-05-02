@@ -19,6 +19,8 @@ public class Event{
     public String getName() { return name; }
     public String getStartTime() { return startTime.toString(); }
     public String getEndTime() { return endTime.toString(); }
+    public Time getStartTimeObj() { return startTime; }
+    public Time getEndTimeObj() { return endTime; }
     public String getClassification() { return classification; }
     public person getSponcerPerson() { return sponcerPerson; }
     public String getSponcerDepartment() { return sponcerDepartment; }
