@@ -4,7 +4,7 @@ A robust, console-based Java application designed to streamline event scheduling
 
 
 ## stars
-![GitHub stars](https://img.shields.io/github/stars/YOUR_USERNAME/YOUR_REPO_NAME?style=social)
+![GitHub stars](https://img.shields.io/github/stars/Maher-Dagestani/ics108project?style=social)
 
 ## 🌟 Features
 
