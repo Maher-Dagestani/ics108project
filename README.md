@@ -2,16 +2,16 @@
 
 A robust, console-based Java application designed to streamline event scheduling and venue management. This project adheres to core Object-Oriented Programming (OOP) principles, including **Encapsulation**, **Abstraction**, **Inheritance**, and **Polymorphism**.
 
-│ 62 + ## 📈 Star History                                                                                                                                                                                                              │
-│ 63 +                                                                                                                                                                                                                                 │
-│ 64 + [![Star History Chart](https://api.star-history.com/svg?repos=Maher-Dagestani/ics108project&type=Date)](https://star-history.com/#Maher-Dagestani/ics108project&Date)                                                           │
-│ 65 +                                                                                                                                                                                                                                 │
-│ 66 + ## 🤝 Contributors                                                                                                                                                                                                              │
-│ 67 +                                                                                                                                                                                                                                 │
-│ 68 + <a href="https://github.com/Maher-Dagestani/ics108project/graphs/contributors">                                                                                                                                                 │
-│ 69 +   <img src="https://contrib.rocks/image?repo=Maher-Dagestani/ics108project" />                                                                                                                                                  │
-│ 70 + </a>                                                                                                                                                                                                                            │
-│ 71 +              
+## 📈 Star History                                                                                                                                                                                                              │
+                                                                                                                                                                                                                                │
+[![Star History Chart](https://api.star-history.com/svg?repos=Maher-Dagestani/ics108project&type=Date)](https://star-history.com/#Maher-Dagestani/ics108project&Date)                                                           │
+                                                                                                                                                                                                                                 │
+ ## 🤝 Contributors                                                                                                                                                                                                              │
+                                                                                                                                                                                                                                │
+ <a href="https://github.com/Maher-Dagestani/ics108project/graphs/contributors">                                                                                                                                                 │
+   <img src="https://contrib.rocks/image?repo=Maher-Dagestani/ics108project" />                                                                                                                                                  │
+ </a>                                                                                                                                                                                                                            │
+              
 
 ## 🌟 Features
 
