@@ -2,6 +2,10 @@
 
 A robust, console-based Java application designed to streamline event scheduling and venue management. This project adheres to core Object-Oriented Programming (OOP) principles, including **Encapsulation**, **Abstraction**, **Inheritance**, and **Polymorphism**.
 
+
+## stars
+![GitHub stars](https://img.shields.io/github/stars/YOUR_USERNAME/YOUR_REPO_NAME?style=social)
+
 ## 🌟 Features
 
 - **Dual User Roles**: Specialized experiences for **Organizers** (with administrative privileges) and **Students**.
