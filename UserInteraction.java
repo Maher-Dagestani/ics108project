@@ -10,6 +10,8 @@ public class UserInteraction {
     public static ArrayList<Venue> venueList = new ArrayList<>();
     
     public UserInteraction(Scanner scnr) {
+		while(true){
+			try{
         System.out.print("Enter your KFUPM ID (numbers only): ");
         id = scnr.nextInt();
         scnr.nextLine();
@@ -27,6 +29,9 @@ public class UserInteraction {
     }
 	public person getUser(){
 		return this.thisPerson;
-    }
-
+		break;
+        }
+			catch(Exception e){System.out.println("Error, please enter valied data!!");}
+		}
+	}
 }
