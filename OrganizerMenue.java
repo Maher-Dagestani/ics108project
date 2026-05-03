@@ -138,22 +138,23 @@ public class OrganizerMenue extends StudentExperience {
         int[] eTime =  {eHour, eMinute};
         endTime = new Time(eDate,eTime);
         // ----------this check if start time is smaller than end time ---------------
-        if(OverlapChecker.checkOverlap(startTime, endTime){throw Exception("Start time is bigger than end time");}
+        if(startTime.compareTime(endTime) >= 0){throw new Exception("Start time is bigger than end time");}
 
 
         // this check for overlap in the same venue
         newEvent = new Event(startTime, endTime, eventName, sponcerDepartment, sponcerPerson, eventClassification);
         Event overlapEvent = newVenue.add(newEvent, thisPerson);
-        if(overlapEvent != null){throw Exception("Overlap with" + overlapEvent.getName()); } 
+        if(overlapEvent != null){throw new Exception("Overlap with" + overlapEvent.getName()); } 
         System.out.println("\n\u001B[34m✔ Event '" + eventName + "' added successfully!\u001B[0m");
         System.out.println("───────────────────────────────────────────────────────────────");
         System.out.println("\nPress \u001B[36mENTER\u001B[0m to continue...");
         scnr.nextLine();
         scnr.nextLine();
         break;
+    
         }
         catch(Exception e){
-            System.out.println("\n\u001B[31m(!) Invalid entry or error. " + e.message() + ".\u001B[0m");
+            System.out.println("\n\u001B[31m(!) Invalid entry or error. " + e.getMessage() + ".\u001B[0m");
             System.out.println("Press \u001B[36mENTER\u001B[0m to continue...");
             scnr.nextLine();
             scnr.nextLine();
