@@ -26,12 +26,18 @@ public class UserInteraction {
             isOrganizer = true;
         }
         thisPerson = new person(id, userName, isOrganizer);
+        break;
+    }
+        catch(Exception e){
+            System.out.println("Error, please enter valied data!!");
+            scnr.nextLine();
+        }
+		
+}
     }
 	public person getUser(){
 		return this.thisPerson;
-		break;
         }
-			catch(Exception e){System.out.println("Error, please enter valied data!!");}
-		}
-	}
+	
+
 }
