@@ -38,11 +38,9 @@
    - Safe Navigation: I added "Press ENTER" pauses so u have time to read error messages or event lists before they dissapear.
 
  ### How to use:
-   1. Compile: Open ur terminal and type javac ics108project/*.java.
-   2. Run: Type java ics108project.Main to start it up.
-   3. Login: Put ur KFUPM ID (numbers) and ur Name. 
-   4. Menus: Use the letters in the brackets (like [s] or [l]) to navigate.
-   5. Exit: Always use [q] to quit properly so it saves ur progress to the database!
+   1. Login: Put ur KFUPM ID (numbers) and ur Name. 
+   2. Menus: Use the letters in the brackets (like [s] or [l]) to navigate.
+   3. Exit: Always use [q] to quit properly so it saves ur progress to the database!
 
   Hope it works fine for u! Its pretty simple but looks proffessional now with the colors and clearing.
 *Developed by 𝔐𝔞𝔥𝔢𝔯 𝔇𝔞𝔤𝔢𝔰𝔱𝔞𝔫𝔦 and mohamad wael*
