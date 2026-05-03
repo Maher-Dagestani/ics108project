@@ -17,9 +17,6 @@ A robust, console-based Java application designed to streamline event scheduling
  </a>                                                                                                                                                                                                                            │
               
 
-
-## our solution is used by many:
-[![Used By](https://img.shields.io/static/v1?label=Used%20By&message=150+Repos&color=brightgreen&logo=github)](https://github.com/Maher-Dagestani/ics108project/network/dependents)
 ## 🌟 Features
 
 - **Dual User Roles**: Specialized experiences for **Organizers** (with administrative privileges) and **Students**.
