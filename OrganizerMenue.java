@@ -27,6 +27,8 @@ public class OrganizerMenue extends StudentExperience {
     }
 
     public void addEventExperience(Scanner scnr, person thisPerson) {
+        while(true){
+        try{
         Event newEvent;
 
         System.out.print("Enter event's name: ");
@@ -133,5 +135,13 @@ public class OrganizerMenue extends StudentExperience {
         newEvent = new Event(startTime, endTime, eventName, sponcerDepartment, sponcerPerson, eventClassification);
         newVenue.add(newEvent, thisPerson);
         System.out.printf("Event added successfully.\n");
+        break;
+        }
+        catch(Exception e){System.out.println("wrong input!! try again!");}
+        scnr.nextLine();
+        }
+
+
+            
     }
 }
