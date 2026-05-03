@@ -4,7 +4,11 @@ A robust, console-based Java application designed to streamline event scheduling
 
 ## 📈 Star History                                                                                                                                                                                                              │
                                                                                                                                                                                                                                 │
-[![Star History Chart](https://api.star-history.com/svg?repos=Maher-Dagestani/ics108project&type=Date)](https://star-history.com/#Maher-Dagestani/ics108project&Date)                                                           │
+[![Star History Chart](https://api.star-history.com/svg?repos=Maher-Dagestani/ics108project&type=Date)](https://star-history.com/#Maher-Dagestani/ics108project&Date)  
+
+## activity graph:
+
+[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=Maher-Dagestani&repo=ics108project&theme=react-dark)](https://github.com/ashutosh00710/github-readme-activity-graph)
                                                                                                                                                                                                                                  │
  ## 🤝 Contributors                                                                                                                                                                                                              │
                                                                                                                                                                                                                                 │
