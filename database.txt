@@ -1,0 +1,50 @@
+3
+KFUPM Stadium
+5000
+sport
+2
+Football Final
+Student Affairs
+sport
+2026 5 10
+18 0
+2026 5 10
+20 30
+1001
+Dr. Ahmed Al-Fahad
+Basketball Open
+Athletics Dept
+sport
+2026 5 12
+16 0
+2026 5 12
+18 0
+1002
+Coach Saleh
+Main Auditorium
+300
+lecture
+1
+Java Workshop
+Computer Science
+academic
+2026 5 15
+9 0
+2026 5 15
+12 0
+1003
+Prof. Khalid
+Exhibition Center
+1000
+public
+1
+Career Fair 2026
+Career Center
+social
+2026 5 20
+8 0
+2026 5 20
+16 0
+1004
+Director Sarah
+0
