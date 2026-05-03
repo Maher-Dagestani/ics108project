@@ -39,10 +39,11 @@ public class Venue {
         }
         return overlap;
     }
-    public void delete(Event event, person person){
+    public boolean delete(Event event, person person){
         if(person.checkPermission()) {
-            events.remove(event);
+            return events.remove(event);
         }
+        return false;
     }
     public ArrayList<Event> getEvents(){
         return this.events;
