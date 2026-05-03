@@ -70,3 +70,7 @@ The project is built using a clean OOP architecture:
 
 ---
 *Developed by 𝔐𝔞𝔥𝔢𝔯 𝔇𝔞𝔤𝔢𝔰𝔱𝔞𝔫𝔦 and mohamad wael*
+
+![Build Status](https://img.shields.io/github/actions/workflow/status/USER/REPO/main.yml)
+![License](https://img.shields.io/github/license/USER/REPO)
+![Stars](https://img.shields.io/github/stars/USER/REPO?style=social)
