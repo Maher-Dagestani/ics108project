@@ -1,4 +1,15 @@
+```
+ _   ________ _   __________  ___                       _       
+| | / /|  ___| | | | ___ \  \/  |                      | |      
+| |/ / | |_  | | | | |_/ / .  . |   _____   _____ _ __ | |_ ___ 
+|    \ |  _| | | | |  __/| |\/| |  / _ \ \ / / _ \ '_ \| __/ __|
+| |\  \| |   | |_| | |   | |  | | |  __/\ V /  __/ | | | |_\__ \
+\_| \_/\_|    \___/\_|   \_|  |_/  \___| \_/ \___|_| |_|\__|___/
+                                                                
+                                                                
+```
 # KFUPM Event & Venue Management System
+- for best experiance, pls check our repo at: [git repo](https://github.com/Maher-Dagestani/ics108project)
 
 A robust, console-based Java application designed to streamline event scheduling and venue management. This project adheres to core Object-Oriented Programming (OOP) principles, including **Encapsulation**, **Abstraction**, **Inheritance**, and **Polymorphism**.
 
