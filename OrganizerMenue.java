@@ -9,7 +9,16 @@ public class OrganizerMenue extends StudentExperience {
     @Override
     protected void loop() {
         while (true) {
-            System.out.println("Greetings, Organizer. Enter \"s\" to join event, \"l\" to see your events, \"n\" to add new event, \"q\" to quit");
+            System.out.print("\033[H\033[2J"); // this is used to clear the terminal
+            System.out.flush();             // this is best practace
+            System.out.println("\n═══════════════════════════════════════════════════════════════");
+            System.out.println("                    ORGANIZER DASHBOARD");
+            System.out.println("═══════════════════════════════════════════════════════════════");
+            System.out.println("  [\u001B[36ms\u001B[0m] Join an existing event");
+            System.out.println("  [\u001B[36ml\u001B[0m] List your current events");
+            System.out.println("  [\u001B[36mn\u001B[0m] Add a new event to a venue");
+            System.out.println("  [\u001B[34mq\u001B[0m] Quit to main menu");
+            System.out.print("\nYour selection: ");
             
             choice = scnr.next().charAt(0);
             scnr.nextLine(); // clear buffer
@@ -29,62 +38,68 @@ public class OrganizerMenue extends StudentExperience {
     public void addEventExperience(Scanner scnr, person thisPerson) {
         while(true){
         try{
+        System.out.print("\033[H\033[2J"); // this is used to clear the terminal
+        System.out.flush();             // this is best practace
         Event newEvent;
+        System.out.println("\n═══════════════════════════════════════════════════════════════");
+        System.out.println("                     CREATE NEW EVENT");
+        System.out.println("═══════════════════════════════════════════════════════════════");
 
-        System.out.print("Enter event's name: ");
+        System.out.print("Enter event's \u001B[36mname\u001B[0m: ");
         eventName = scnr.nextLine();
-        System.out.print("Enter the sponcer department: ");
+        System.out.print("Enter the \u001B[36msponsoring department\u001B[0m: ");
         sponcerDepartment = scnr.nextLine();
 
-        System.out.printf("\n\n now enter the details of the appointed supervisor from the sponcer department: \n");
-        System.out.print("Enter the sponcer person's KFUPM ID: ");
+        System.out.println("\n--- Supervisor Details ---");
+        System.out.print("Supervisor \u001B[36mKFUPM ID\u001B[0m: ");
         int sPId = scnr.nextInt();
         scnr.nextLine();
-        System.out.print("Enter the sponcer person's name: ");
+        System.out.print("Supervisor \u001B[36mName\u001B[0m: ");
         String sPName = scnr.nextLine();
         sponcerPerson = new person(sPId, sPName, true);
-        System.out.printf("\n\nEnter the event's classification\nEnter \"1\" if the event is sports\nEnter \"2\" if the event is social\nEnter \"3\" if the event is religious\nEnter \"4\" if the event is academic");
+
+        System.out.println("\n--- Event Classification ---");
+        System.out.println(" [\u001B[34m1\u001B[0m] Sports  [\u001B[34m2\u001B[0m] Social  [\u001B[34m3\u001B[0m] Religious  [\u001B[34m4\u001B[0m] Academic");
+        System.out.print("Selection: ");
         eventClassification = scnr.nextLine();
-        System.out.print("Choose from already existing venues (enter \"e\") or create new venue (enter \"n\"): ");
+
+        System.out.println("\n--- Venue Selection ---");
+        System.out.print("Use [\u001B[34me\u001B[0m]xisting venue or create [\u001B[34mn\u001B[0m]ew venue? ");
         choice = scnr.next().charAt(0);
         scnr.nextLine();
+
         if (Character.toLowerCase(choice) == 'e') {
-            System.out.println("Choose from the following venues (please enter the ID as an integer, not the venue's name):");
-            Venue venue1 = new Venue("sport", 21, "venue1");
-            Venue venue2 = new Venue("lecture", 41, "venue2");
-            Venue venue3 = new Venue("conference", 211, "venue3");
-            Venue venue4 = new Venue("public", 234, "venue4");
-            UserInteraction.venueList.add(venue1);
-            UserInteraction.venueList.add(venue2);
-            UserInteraction.venueList.add(venue3);
-            UserInteraction.venueList.add(venue4);
+            System.out.println("\nSelect a venue from the list:");
+            if (UserInteraction.venueList.isEmpty()) {
+                // Initializing default venues if list is empty for demonstration/fallback
+                UserInteraction.venueList.add(new Venue("sport", 21, "Main Stadium"));
+                UserInteraction.venueList.add(new Venue("lecture", 41, "Building 24 Hall"));
+                UserInteraction.venueList.add(new Venue("conference", 211, "Exhibition Center"));
+            }
 
             for (int i = 0; i < UserInteraction.venueList.size(); i++) {
-                System.out.println("ID = " + (i + 1) + " --- Venue's name: " + UserInteraction.venueList.get(i).venueName);
+                System.out.println("  [\u001B[36m" + (i + 1) + "\u001B[0m] " + UserInteraction.venueList.get(i).venueName);
             }
             System.out.print("Your choice: ");
             int existingVenuesChoice = scnr.nextInt() - 1; 
             chosenVenue = UserInteraction.venueList.get(existingVenuesChoice).venueName;
             newVenue = UserInteraction.venueList.get(existingVenuesChoice);
-            System.out.printf("\n\nSuccessfully chosen venue: " + chosenVenue + "\n\n");
+            System.out.println("\u001B[34m✔ Venue selected:\u001B[0m " + chosenVenue);
         } else if (Character.toLowerCase(choice) == 'n') {
             String venueName;
-            System.out.print("Enter the venue's name: ");
+            System.out.print("New venue \u001B[36mname\u001B[0m: ");
             venueName = scnr.nextLine();
-            System.out.print("Enter max capacity (integers only): ");
+            System.out.print("Max \u001B[36mcapacity\u001B[0m: ");
             int maxCapacity = scnr.nextInt();
-            System.out.printf("\nChoose venue classification:\nEnter \"1\" if the venue is a sports area\nEnter \"2\" if the venue is a lecture hall\nEnter \"3\" if the venue is a conference hall\nEnter \"4\" if the venue is a public space ");
-            System.out.printf("\nYour answer: ");
+            System.out.println("\nVenue Classification:");
+            System.out.println(" [\u001B[34m1\u001B[0m] Sports  [\u001B[34m2\u001B[0m] Lecture  [\u001B[34m3\u001B[0m] Conference  [\u001B[34m4\u001B[0m] Public");
+            System.out.print("Your answer: ");
             int venueTempNum = scnr.nextInt();
-            if (venueTempNum == 1) {
-                venueClassification = "sport";
-            } else if (venueTempNum == 2) {
-                venueClassification = "lecture";
-            } else if (venueTempNum == 3) {
-                venueClassification = "conference";
-            } else if (venueTempNum == 4) {
-                venueClassification = "public";
-            }
+            if (venueTempNum == 1) venueClassification = "sport";
+            else if (venueTempNum == 2) venueClassification = "lecture";
+            else if (venueTempNum == 3) venueClassification = "conference";
+            else venueClassification = "public";
+
             newVenue = new Venue(venueClassification, maxCapacity, venueName);
             
             for (int i = 0; i < UserInteraction.venueList.size(); i++) {
@@ -92,37 +107,28 @@ public class OrganizerMenue extends StudentExperience {
                     dupeCheck = true;
                 } 
             }
-            if (dupeCheck == false) {
+            if (!dupeCheck) {
                 UserInteraction.venueList.add(newVenue);
                 chosenVenue = newVenue.venueName;
-                System.out.println("New venue added successfully, and it has been chosen for your event, please continue: ");
+                System.out.println("\u001B[34m✔ New venue added and selected.\u001B[0m");
             }
         }
         
-        System.out.printf("\n\n\n\nNow you need enter the start and end date of the event (all your answers should be entered as an a number): \n");
-        System.out.println("Firstly, we will begin with the event's start date: ");
-        System.out.print("Enter year (2000 - present): ");
-        sYear = scnr.nextInt();
-        System.out.print("Enter month (1 - 12): ");
-        sMonth = scnr.nextInt();
-        System.out.print("Enter day (make sure the day exists in the month and is entered as an integer): ");
-        sDay = scnr.nextInt();
-        System.out.print("Enter hour (24-hour system, 0 - 24): ");
-        sHour = scnr.nextInt();
-        System.out.print("Enter minute (0 - 60): ");
-        sMinute = scnr.nextInt();
+        System.out.println("\n--- Event Timing ---");
+        System.out.println("(Please enter numerical values)");
+        System.out.println("\u001B[36mSTART DATE:\u001B[0m");
+        System.out.print("  Year: "); sYear = scnr.nextInt();
+        System.out.print("  Month: "); sMonth = scnr.nextInt();
+        System.out.print("  Day: "); sDay = scnr.nextInt();
+        System.out.print("  Hour: "); sHour = scnr.nextInt();
+        System.out.print("  Min: "); sMinute = scnr.nextInt();
 
-        System.out.printf("\n\n\n\nNow enter the event's end date: \n");
-        System.out.print("Enter year (2000 - present): ");
-        eYear = scnr.nextInt();
-        System.out.print("Enter month (1 - 12): ");
-        eMonth = scnr.nextInt();
-        System.out.print("Enter day (make sure the day exists in the month and is entered as an integer): ");
-        eDay = scnr.nextInt();
-        System.out.print("Enter hour (24-hour system, 0 - 24): ");
-        eHour = scnr.nextInt();
-        System.out.print("Enter minute (0 - 60): ");
-        eMinute = scnr.nextInt();
+        System.out.println("\u001B[36mEND DATE:\u001B[0m");
+        System.out.print("  Year: "); eYear = scnr.nextInt();
+        System.out.print("  Month: "); eMonth = scnr.nextInt();
+        System.out.print("  Day: "); eDay = scnr.nextInt();
+        System.out.print("  Hour: "); eHour = scnr.nextInt();
+        System.out.print("  Min: "); eMinute = scnr.nextInt();
         
         int[] sDate =  {sYear, sMonth, sDay};
         int[] sTime =  {sHour, sMinute};
@@ -134,10 +140,19 @@ public class OrganizerMenue extends StudentExperience {
 
         newEvent = new Event(startTime, endTime, eventName, sponcerDepartment, sponcerPerson, eventClassification);
         newVenue.add(newEvent, thisPerson);
-        System.out.printf("Event added successfully.\n");
+        System.out.println("\n\u001B[34m✔ Event '" + eventName + "' added successfully!\u001B[0m");
+        System.out.println("───────────────────────────────────────────────────────────────");
+        System.out.println("\nPress \u001B[36mENTER\u001B[0m to continue...");
+        scnr.nextLine();
+        scnr.nextLine();
         break;
         }
-        catch(Exception e){System.out.println("wrong input!! try again!");}
+        catch(Exception e){
+            System.out.println("\n\u001B[31m(!) Invalid entry or error. Please try again.\u001B[0m");
+            System.out.println("Press \u001B[36mENTER\u001B[0m to continue...");
+            scnr.nextLine();
+            scnr.nextLine();
+        }
         scnr.nextLine();
         }
 

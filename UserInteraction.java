@@ -12,12 +12,17 @@ public class UserInteraction {
     public UserInteraction(Scanner scnr) {
 		while(true){
 			try{
-        System.out.print("Enter your KFUPM ID (numbers only): ");
+        System.out.print("\033[H\033[2J"); // this is used to clear the terminal
+        System.out.flush();             // this is best practace
+        System.out.println("\n═══════════════════════════════════════════════════════════════");
+        System.out.println("                 Welcome to the Event Manager");
+        System.out.println("═══════════════════════════════════════════════════════════════");
+        System.out.print("Please enter your \u001B[36mKFUPM ID\u001B[0m (numbers only): ");
         id = scnr.nextInt();
         scnr.nextLine();
-        System.out.print("Enter your Name: ");
+        System.out.print("Please enter your \u001B[36mName\u001B[0m: ");
         userName = scnr.nextLine();
-        System.out.print("Enter \"s\" if you are a student or enter \"o\" if you are an organizer:");
+        System.out.print("Enter '\u001B[34ms\u001B[0m' for Student or '\u001B[34mo\u001B[0m' for Organizer: ");
         sOrO = scnr.next().charAt(0);
 
         if (Character.toLowerCase(sOrO) == 's') {
@@ -26,11 +31,14 @@ public class UserInteraction {
             isOrganizer = true;
         }
         thisPerson = new person(id, userName, isOrganizer);
+        System.out.println("───────────────────────────────────────────────────────────────");
         break;
     }
         catch(Exception e){
-            System.out.println("Error, please enter valied data!!");
-            scnr.nextLine();
+            System.out.println("\n\u001B[31m(!) Invalid data entry. Please try again.\u001B[0m");
+            System.out.println("Press \u001B[36mENTER\u001B[0m to continue...");
+            scnr.nextLine(); // Clear buffer
+            scnr.nextLine(); // Wait for input
         }
 		
 }

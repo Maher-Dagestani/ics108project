@@ -43,7 +43,7 @@ public class Database {
             }
             writer.close();
         } catch (IOException e) {
-            System.out.println("Error saving database: " + e.getMessage());
+            System.out.println("\n\u001B[31m(!) Data Save Error:\u001B[0m " + e.getMessage());
         }
     }
 
@@ -101,7 +101,7 @@ public class Database {
             }
             reader.close();
         } catch (Exception e) {
-            System.out.println("Starting fresh (no database or file corrupted).");
+            System.out.println("\n\u001B[31m(i) Starting fresh session (data not found or reset).\u001B[0m");
         }
     }
 }
