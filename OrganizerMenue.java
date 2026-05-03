@@ -121,17 +121,47 @@ public class OrganizerMenue extends StudentExperience {
         System.out.println("(Please enter numerical values)");
         System.out.println("\u001B[36mSTART DATE:\u001B[0m");
         System.out.print("  Year: "); sYear = scnr.nextInt();
+        if (sYear < 2026) {
+            throw new Exception("Year should be 2026 or later.");
+        }
         System.out.print("  Month: "); sMonth = scnr.nextInt();
+        if (sMonth < 1 || sMonth > 12) {
+            throw new Exception("Month should be between 1 and 12.");
+        }
         System.out.print("  Day: "); sDay = scnr.nextInt();
+        if (sDay > 31 || sDay < 1) {
+            throw new Exception("Day should be between 1 and 31.");
+        }
         System.out.print("  Hour: "); sHour = scnr.nextInt();
+        if (sHour > 24 || sHour < 0) {
+            throw new Exception("Hour should be between 0 and 24.");
+        }
         System.out.print("  Min: "); sMinute = scnr.nextInt();
+        if (sMinute > 60 || sMinute < 0) {
+            throw new Exception("Minute should be between 0 and 60.");
+        }
 
         System.out.println("\u001B[36mEND DATE:\u001B[0m");
         System.out.print("  Year: "); eYear = scnr.nextInt();
+        if (eYear < 2026) {
+            throw new Exception("Year should be 2026 or later.");
+        }
         System.out.print("  Month: "); eMonth = scnr.nextInt();
+        if (eMonth < 1 || eMonth > 12) {
+            throw new Exception("Month should be between 1 and 12.");
+        }
         System.out.print("  Day: "); eDay = scnr.nextInt();
+        if (eDay > 31 || eDay < 1) {
+            throw new Exception("Day should be between 1 and 31.");
+        }
         System.out.print("  Hour: "); eHour = scnr.nextInt();
+        if (eHour > 24 || eHour < 0) {
+            throw new Exception("Hour should be between 0 and 24.");
+        }
         System.out.print("  Min: "); eMinute = scnr.nextInt();
+        if (eMinute > 60 || eMinute < 0) {
+            throw new Exception("Minute should be between 0 and 60.");
+        }
         
         int[] sDate =  {sYear, sMonth, sDay};
         int[] sTime =  {sHour, sMinute};
