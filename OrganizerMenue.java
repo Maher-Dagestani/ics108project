@@ -139,7 +139,9 @@ public class OrganizerMenue extends StudentExperience {
         endTime = new Time(eDate,eTime);
         // ----------this check if start time is smaller than end time ---------------
         if(OverlapChecker.checkOverlap(startTime, endTime){throw Exception("Start time is bigger than end time");}
-            
+
+
+        // this check for overlap in the same venue
         newEvent = new Event(startTime, endTime, eventName, sponcerDepartment, sponcerPerson, eventClassification);
         Event overlapEvent = newVenue.add(newEvent, thisPerson);
         if(overlapEvent != null){throw Exception("Overlap with" + overlapEvent.getName()); } 
