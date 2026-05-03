@@ -11,7 +11,6 @@
 # KFUPM Event & Venue Management System
 - for best experiance, pls check our repo at: [git repo](https://github.com/Maher-Dagestani/ics108project)
 
-A robust, console-based Java application designed to streamline event scheduling and venue management. This project adheres to core Object-Oriented Programming (OOP) principles, including **Encapsulation**, **Abstraction**, **Inheritance**, and **Polymorphism**.
 
 ## 📈 Star History                                                                                                                                                                                                              │
                                                                                                                                                                                                                                 │
@@ -28,62 +27,24 @@ A robust, console-based Java application designed to streamline event scheduling
  </a>                                                                                                                                                                                                                            │
               
 
-## 🌟 Features
+ Hey! Here is a litle guide for my project. Its basically an Event Manager system for KFUPM students and staff. I tried to make it look like a real app instead of just a boring command line script.
 
-- **Dual User Roles**: Specialized experiences for **Organizers** (with administrative privileges) and **Students**.
-- **Venue Management**: Support for various venue types, including Sports Areas, Lecture Halls, Conference Halls, and Public Spaces.
-- **Event Scheduling**: Create and manage events with detailed classifications (Sports, Social, Religious, Academic).
-- **Conflict Resolution**: Built-in `OverlapChecker` ensures no two events are scheduled in the same venue at the same time.
-- **Participation System**: Students can browse and enroll in events, maintaining their own personalized schedules with overlap protection.
-- **Data Persistence**: Automatic saving and loading of system state via `database.txt`.
-- **Intuitive UI**: A clean, interactive command-line interface with step-by-step prompts.
+ ### Fetures:
+   - Awesome Logo: U get a cool ASCII art logo when u start the program.
+   - Colors: I used Cyan for prompts and Blue for lists and data. Red shows up if u make a mistake.
+   - Clean UI: The screen clears itself evry time u move to a new menu so it doesnt get messy.
+   - Roles: U can login as a Student to join events, or an Organizr to create new venues and events.
+   - Auto-Save: It saves evrything to a database.txt file when u quit so u dont lose ur data.
+   - Safe Navigation: I added "Press ENTER" pauses so u have time to read error messages or event lists before they dissapear.
 
-## 🛠️ Architecture
+ ### How to use:
+   1. Compile: Open ur terminal and type javac ics108project/*.java.
+   2. Run: Type java ics108project.Main to start it up.
+   3. Login: Put ur KFUPM ID (numbers) and ur Name. 
+   4. Menus: Use the letters in the brackets (like [s] or [l]) to navigate.
+   5. Exit: Always use [q] to quit properly so it saves ur progress to the database!
 
-The project is built using a clean OOP architecture:
-- **Inheritance**: `OrganizerMenue` extends `StudentExperience`, leveraging shared UI logic while adding administrative capabilities.
-- **Encapsulation**: Private fields with public getters/setters (e.g., in `Event` and `person` classes) maintain data integrity.
-- **Utility Classes**: Dedicated logic for `Time` management, `OverlapChecker`, and `Database` operations.
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Java Development Kit (JDK) 8 or higher.
-
-### Installation & Running
-1. Compile all Java files:
-   ```bash
-   javac *.java
-   ```
-2. Run the application:
-   ```bash
-   java Main
-   ```
-
-## 📖 Usage
-
-### For Organizers 👔
-- **Manage Venues**: Create new locations or use existing ones.
-- **Schedule Events**: Enter event names, sponsor departments, and supervisors.
-- **Smart Scheduling**: The system validates time slots and prevents double-booking of venues.
-
-### For Students 🎓
-- **Browse**: View all upcoming events organized by venue.
-- **Enroll**: Join events; the system automatically checks for conflicts in your personal schedule.
-- **Personal List**: View a list of all events you are currently registered for.
-
-## 📁 Project Structure
-
-- `Main.java`: The entry point and main application loop.
-- `person.java`: Handles user profiles and permissions.
-- `Event.java`: Core class for event details and timing.
-- `Venue.java`: Base class for all event locations.
-- `Time.java`: Handles custom date and time formatting and comparisons.
-- `Database.java`: Manages file I/O for persistent storage.
-- `OverlapChecker.java`: The logic engine for preventing scheduling conflicts.
-- `UserInteraction.java`: Base class for handling console inputs and outputs.
-
----
+  Hope it works fine for u! Its pretty simple but looks proffessional now with the colors and clearing.
 *Developed by 𝔐𝔞𝔥𝔢𝔯 𝔇𝔞𝔤𝔢𝔰𝔱𝔞𝔫𝔦 and mohamad wael*
 
 ![Build Status](https://img.shields.io/github/actions/workflow/status/Maher-Dagestani/ics108project/main.yml)
