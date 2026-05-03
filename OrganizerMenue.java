@@ -16,6 +16,7 @@ public class OrganizerMenue extends StudentExperience {
             System.out.println("═══════════════════════════════════════════════════════════════");
             System.out.println("  [\u001B[36ms\u001B[0m] Join an existing event");
             System.out.println("  [\u001B[36ml\u001B[0m] List your current events");
+            System.out.println("  [\u001B[36mc\u001B[0m] Cancel an event");
             System.out.println("  [\u001B[36mn\u001B[0m] Add a new event to a venue");
             System.out.println("  [\u001B[34mq\u001B[0m] Quit to main menu");
             System.out.print("\nYour selection: ");
@@ -31,6 +32,8 @@ public class OrganizerMenue extends StudentExperience {
                 addEventExperience(scnr, thisPerson);
             } else if (Character.toLowerCase(choice) == 'q') {
                 break;
+            } else if (Character.toLowerCase(choice) == 'c') {
+                cancelEventExperience(scnr, thisPerson);
             }
         }
     }
@@ -162,7 +165,46 @@ public class OrganizerMenue extends StudentExperience {
         scnr.nextLine();
         }
 
+    }
 
-            
+    public void cancelEventExperience(Scanner scnr, person thisPerson) {
+
+        System.out.print("\033[H\033[2J"); // this is used to clear the terminal
+        System.out.flush();             // this is best practace
+        System.out.println("\n═══════════════════════════════════════════════════════════════");
+        System.out.println("                     EVENT CANCELLATION DASHBOARD");
+        System.out.println("═══════════════════════════════════════════════════════════════");
+        for (Venue x : UserInteraction.venueList) {
+            System.out.println("\n📍 Venue: \u001B[36m" + x.getName() + "\u001B[0m");
+            System.out.println("  ─────────────────────────────────────────────────────────────");
+            if (x.getEvents().isEmpty()) {
+                System.out.println("     (No events scheduled at this venue)");
+            }
+            for (Event y : x.getEvents()) {
+                System.out.println("  • Event: \u001B[34m" + String.format("%-20s", y.getName()) + "\u001B[0m | Date: " + y.getStartTime());
+            }
+        }
+        System.out.println("───────────────────────────────────────────────────────────────");
+        System.out.print("\nCancel an event (enter the \u001B[36mexact name\u001B[0m): ");
+        String chosenEventName = scnr.next();
+        chosenEventName += scnr.nextLine();
+
+        boolean found = false;
+        for (int i = 0; i < UserInteraction.venueList.size(); i++) {
+            for (int j = 0; j < UserInteraction.venueList.get(i).getEvents().size(); j++) {
+                if (UserInteraction.venueList.get(i).getEvents().get(j).getName().equalsIgnoreCase(chosenEventName.trim())) {
+                    UserInteraction.venueList.get(i).getEvents().remove(j);
+                    System.out.println("\u001B[34m✔ Successfully cancelled:\u001B[0m " + chosenEventName);
+                    found = true;
+                    break;
+                }
+            }
+            if (found) break;
+        }
+        if (!found) {
+            System.out.println("\u001B[31m(!) Event not found. Please check the name and try again.\u001B[0m");
+        }
+        System.out.println("\nPress \u001B[36mENTER\u001B[0m to continue...");
+        scnr.nextLine();
     }
 }
