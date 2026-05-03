@@ -7,7 +7,7 @@ Football Final
 Student Affairs
 sport
 2026 5 10
-18 0
+18 00
 2026 5 10
 20 30
 1001
@@ -16,9 +16,9 @@ Basketball Open
 Athletics Dept
 sport
 2026 5 12
-16 0
+16 00
 2026 5 12
-18 0
+18 00
 1002
 Coach Saleh
 Main Auditorium
@@ -29,9 +29,9 @@ Java Workshop
 Computer Science
 academic
 2026 5 15
-9 0
+9 00
 2026 5 15
-12 0
+12 00
 1003
 Prof. Khalid
 Exhibition Center
@@ -42,9 +42,9 @@ Career Fair 2026
 Career Center
 social
 2026 5 20
-8 0
+8 00
 2026 5 20
-16 0
+16 00
 1004
 Director Sarah
 0
