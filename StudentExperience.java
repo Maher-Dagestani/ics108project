@@ -58,9 +58,11 @@ public class StudentExperience {
             for (int j = 0; j < UserInteraction.venueList.get(i).getEvents().size(); j++) {
                 if (UserInteraction.venueList.get(i).getEvents().get(j).getName().equals(chosenEventName)) {
                     thisPerson.addEvent(UserInteraction.venueList.get(i).getEvents().get(j));
+					break;
                 }
             }
         }
+		System.out.println("your event is not found! please type the name correctly!");
 
 
 
@@ -82,6 +84,7 @@ public void list(Scanner scnr, person thisPerson){
 
         
 	while(true){
+		try{
 	System.out.println("Greetings, student. Enter \"s\" to join event. \"l\" to see your current events, \"q\" to quit");
         
         choice = scnr.next().charAt(0);
@@ -95,6 +98,8 @@ public void list(Scanner scnr, person thisPerson){
 	if (Character.toLowerCase(choice) == 'q') {
             break;
         }
+		}
+		catch(Exception e){System.out.println("your input is wrong, try again");}
         }
 
      }
