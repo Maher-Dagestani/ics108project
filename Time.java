@@ -47,7 +47,7 @@ public class Time {
         }
         for(int i = 0; i < this.getHour().length; i++){
             if (i == 0){timeData = timeData + "\n time: "+ this.getHour()[i];}
-            else{timeData = timeData + ":" + this.getDate()[i];}
+            else{timeData = timeData + ":" + this.getHour()[i];}
         }
         return timeData;
 
