@@ -19,12 +19,12 @@
 ## activity graph:
 
 [![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=Maher-Dagestani&repo=ics108project&theme=react-dark)](https://github.com/ashutosh00710/github-readme-activity-graph)
-                                                                                                                                                                                                                                 │
- ## 🤝 Contributors                                                                                                                                                                                                              │
-                                                                                                                                                                                                                                │
- <a href="https://github.com/Maher-Dagestani/ics108project/graphs/contributors">                                                                                                                                                 │
-   <img src="https://contrib.rocks/image?repo=Maher-Dagestani/ics108project" />                                                                                                                                                  │
- </a>                                                                                                                                                                                                                            │
+                                                                                                                                                                                                                                 
+ ## 🤝 Contributors                                                                                                                                                                                                              
+                                                                                                                                                                                                                                
+ <a href="https://github.com/Maher-Dagestani/ics108project/graphs/contributors">                                                                                                                                                 
+   <img src="https://contrib.rocks/image?repo=Maher-Dagestani/ics108project" />                                                                                                                                                  
+ </a>                                                                                                                                                                                                                            
               
 
  Hey! Here is a litle guide for my project. Its basically an Event Manager system for KFUPM students and staff. I tried to make it look like a real app instead of just a boring command line script.
